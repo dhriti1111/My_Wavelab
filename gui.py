@@ -40,6 +40,7 @@ st.markdown((
     <style>
     @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@700&display=swap');
 
     /* Global Font & Background */
     .stApp {{
@@ -63,9 +64,13 @@ st.markdown((
 
     /* Title Styles inside Sidebar */
     .sidebar-custom-title {{
-        font-family: 'Pacifico', cursive;
+        font-family: 'Exo 2', 'Pacifico', cursive, sans-serif;
         font-size: 3rem;
-        color: {accent};
+        background: linear-gradient(90deg, #A259FF 0%, #FF6F91 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
         text-shadow: 0 4px 8px rgba(0,0,0,0.5);
         line-height: 1.2;
         margin: 0;
@@ -116,9 +121,13 @@ st.markdown((
 
     /* Main Page Title Styles */
     .custom-title {{
-        font-family: 'Pacifico', cursive;
+        font-family: 'Exo 2', 'Pacifico', cursive, sans-serif;
         font-size: 4rem;
-        color: {accent};
+        background: linear-gradient(90deg, #A259FF 0%, #FF6F91 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
         margin-bottom: -0.5rem;
         text-shadow: 0 4px 8px rgba(0,0,0,0.5);
     }}
@@ -351,8 +360,12 @@ with st.sidebar:
 # ==============================================================================
 # VIEW 1: HOME (VISUALIZER)
 # ==============================================================================
+
 if st.session_state.page == 'home':
-    
+    # --- MAIN AREA TITLE & SUBTITLE ---
+    st.markdown('<div class="custom-title">MyWaveLab</div>', unsafe_allow_html=True)
+    st.markdown('<div class="custom-subtitle">Interactive Signal Processing Visualizer</div>', unsafe_allow_html=True)
+
     # --- SPECIFIC CONTROLS (Appended to Sidebar) ---
     with st.sidebar:
         st.markdown("<div class='sidebar-header'>Control Panel</div>", unsafe_allow_html=True)
