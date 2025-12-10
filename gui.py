@@ -38,23 +38,6 @@ NEON_DARK = {
 st.markdown((
     """
     <style>
-    /* Responsive font sizes for titles */
-    @media (max-width: 600px) {
-        .sidebar-custom-title {
-            font-size: 2rem !important;
-        }
-        .custom-title {
-            font-size: 2.5rem !important;
-        }
-    }
-    @media (max-width: 400px) {
-        .sidebar-custom-title {
-            font-size: 1.3rem !important;
-        }
-        .custom-title {
-            font-size: 1.7rem !important;
-        }
-    }
     @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@700&display=swap');
@@ -91,6 +74,11 @@ st.markdown((
         text-shadow: 0 4px 8px rgba(0,0,0,0.5);
         line-height: 1.2;
         margin: 0;
+    }}
+    @media (max-width: 600px) {{
+        .sidebar-custom-title {{
+            font-size: 2rem;
+        }}
     }}
     
     /* Subtitle Styles inside Sidebar (CYAN) */
@@ -147,6 +135,11 @@ st.markdown((
         text-fill-color: transparent;
         margin-bottom: -0.5rem;
         text-shadow: 0 4px 8px rgba(0,0,0,0.5);
+    }}
+    @media (max-width: 600px) {{
+        .custom-title {{
+            font-size: 2.2rem;
+        }}
     }}
     .custom-subtitle {{
         font-family: sans-serif;
