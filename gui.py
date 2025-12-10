@@ -38,6 +38,23 @@ NEON_DARK = {
 st.markdown((
     """
     <style>
+    /* Responsive font sizes for titles */
+    @media (max-width: 600px) {
+        .sidebar-custom-title {
+            font-size: 2rem !important;
+        }
+        .custom-title {
+            font-size: 2.5rem !important;
+        }
+    }
+    @media (max-width: 400px) {
+        .sidebar-custom-title {
+            font-size: 1.3rem !important;
+        }
+        .custom-title {
+            font-size: 1.7rem !important;
+        }
+    }
     @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@700&display=swap');
